@@ -13,7 +13,7 @@ if (!empty($_GET['location'])){
    * Time to make our Instagram api request. We'll build the url using the
    * coordinate values returned by the google maps api
    */
-  $instagram_url = 'https://'. 'api.instagram.com/v1/media/search' . '?lat=' . $lat . '&lng=' . $lng .'&distance=' . $_GET['distance'] . '&client_id=######################################'; //you'll need to generate your own client ID from the instagram developer's site. follow the four easy steps from https://github.com/marcbaetica/Instagram-Locator/edit/master/README.md
+  $instagram_url = 'https://'. 'api.instagram.com/v1/media/search' . '?lat=' . $lat . '&lng=' . $lng .'&distance=' . $_GET['distance'] . '&client_id=######################################'; //you'll need to generate your own client ID from the instagram developer's site. Follow the four steps described at https://github.com/marcbaetica/Instagram-Locator/edit/master/README.md
   $instagram_json = file_get_contents($instagram_url);
   $instagram_array = json_decode($instagram_json, true);
 }
